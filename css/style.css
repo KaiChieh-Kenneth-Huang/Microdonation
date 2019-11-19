@@ -1,0 +1,114 @@
+:root {
+    --theme-color-1: #ff560d;
+    --theme-color-2: #ffb32e;
+    --menu-speed: 0.75s;
+  }
+
+ body {
+    font-family: 'Proxima Nova', 'Roboto', Georgia;
+    margin: 0;
+
+ }
+ 
+ header {
+    color: var(--theme-color-1);
+    padding: 30px 100px;
+    margin: 0;
+    height: 150px;
+    background: #fff;
+ }
+ header img{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    z-index: 2;
+    top:30px;
+    right:0px;
+    padding: 30px 100px;
+ }
+
+.cover{
+    height: 100%;
+    width: 100%;
+    background: url('../images/cover.gif') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+ .button1{
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    width: 20%;
+    border: none;
+    background: var(--theme-color-1);
+    color: #fff;
+    padding: 1.5rem;
+    margin: auto;
+    text-decoration: none;
+    cursor:pointer;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #444;
+    bottom: 100px;
+    left: 40%;
+ }
+ .button1 a{
+    color: #fff;
+    text-decoration: none;
+  }
+.back-button{
+   padding: 50px;
+}
+.back-button img{
+   height: 50px;
+}
+
+.banner{
+   margin:0;
+   width: 100%;
+   height: 450px;
+}
+
+.project-title{
+   color: black;
+   font-weight: bold;
+   font-size: 2.5rem;
+   margin-bottom: 5px;
+}
+
+.project-subtitle{
+   margin-top: 0;
+   margin-bottom: 0;
+   color: black;
+}
+
+.number-box-container{
+   margin-top: 0;
+   display: flex;
+   width: 100%;
+   justify-content: space-around;
+}
+
+.number-box{
+   text-align: center;
+}
+
+.number{
+   color: var(--theme-color-2);
+   font-weight: bold;
+   font-size: 3rem;
+   margin: 0;
+}
+
+.number-title{
+   color: black;
+   font-weight: bold;
+   font-size: 1.5rem;
+}
+
+.main-content{
+   padding: 100px;
+}
