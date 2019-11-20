@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Charities List</title>
+        <link href="https://fonts.googleapis.com/css?family=Proxima+Nova" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/donate.css">
+    </head>
+    <body>
+        <div class="back-button"> 
+          <img src="back.svg" onclick="goBack()">
+        </div>
+
+        <div class="body-container">
+          <h1>Tap price tag and get 20% off any ice cream!</h1>
+          <div id="ave-donation">
+            <p>$5.49</p>
+            Average Donation
+          </div>
+          <div style="height: 285px; padding:100px">
+              <img id="center-image" style="height: 285px;" src="images/1_dollar.png">
+          </div>
+          <div class="amount-selector">
+            <div id="1-dollar" class="amount-button" onClick="update(true, 1);">$1</div>
+            <div id="5-dollar" class="amount-button" onClick="update(true, 5);">$5</div>
+            <div id="10-dollar" class="amount-button" onClick="update(true, 10);">$10</div>
+            <div id="20-dollar" class="amount-button" onClick="update(true, 20);">$20</div>
+          </div>
+          <div id="other" class="amount-button other-amount" onClick="update(false, this.value);">
+            Other
+            <div id="other-input-box" class="input-box">
+              <input type="number" name="amount" placeholder="Enter Donation Amount" min="0" onChange="updateImg(this.value);">
+            </div>
+          </div>
+          <div class="button bottom-btn" onclick="donate()">
+            Donate and Save
+          </div>
+        </div>
+
+
+      <script>
+        var selected_amount_id='1-dollar';
+        update(true, 1);
+
+        function donate(){
+          if(true){
+            window.location.href = 'thank.html';
+          }else{
+
+          }
+          
+        }
+        function update(isSetAmount, amount) {
+          document.getElementById('center-image').style.height="0px";
+          document.getElementById(selected_amount_id).style.color = 'var(--theme-color-2)';
+          document.getElementById(selected_amount_id).style.backgroundColor = '#fff';
+          if(isSetAmount){
+            document.getElementById(amount + '-dollar').style.color = '#fff';
+            document.getElementById(amount + '-dollar').style.backgroundColor = 'var(--theme-color-2)';
+            selected_amount_id = amount + '-dollar';
+          }else{
+            document.getElementById('other').style.color = '#fff';
+            document.getElementById('other-input-box').style.borderBottomColor = '#fff';
+            document.getElementById('other').style.backgroundColor = 'var(--theme-color-2)';
+            selected_amount_id = 'other';
+          }
+          
+          setTimeout(() => {changeCenterImg(amount);}, 500);
+        }
+
+        function updateImg(amount){
+          document.getElementById('center-image').style.height="0px";
+          document.getElementById('other').value=amount;
+          setTimeout(() => {changeCenterImg(amount);}, 500);
+        }
+
+        function changeCenterImg(amount){
+          if(amount >= 1 && amount < 5){
+            document.getElementById('center-image').src='images/1_dollar.png';
+          }else if(amount >= 5 && amount < 10){
+            document.getElementById('center-image').src='images/5_dollar.png';
+          }else if(amount >= 10 && amount < 20){
+            document.getElementById('center-image').src='images/10_dollar.png';
+          }else if(amount >= 20){
+            document.getElementById('center-image').src='images/20_dollar.png';
+          }else{
+            document.getElementById('center-image').src='images/question_mark.png';
+          }
+          document.getElementById('center-image').style.height="285px"; 
+        }
+
+        function goBack() {
+          window.history.back();
+        }
+      </script>
+        
+    </body>
+</html>

@@ -13,9 +13,7 @@
     </head>
     <body>
         <div class="back-button"> 
-          <a href="index.html"> 
-            <img src="back.svg">
-          </a>
+            <img src="back.svg" onclick="goBack()">
         </div>
         <!--Projects-->
         <div id="projects" class="project-container">
@@ -64,8 +62,11 @@
             </a> 
           </div>
         
-        <script src="js/projects.js"></script>
-        </script>
+          <script>
+              function goBack() {
+                  window.history.back();
+              }
+          </script>
         
     </body>
 </html>

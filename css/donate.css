@@ -1,0 +1,75 @@
+:root {
+    --theme-color-1: #ff560d;
+    --theme-color-2: #ffb32e;
+    --menu-speed: 0.75s;
+  }
+
+body{
+    text-align: center;
+}
+
+img{
+    transition: 0.5s ease-in-out;
+}
+
+.body-container{
+    animation-name: fadeUp;
+   animation-duration: 1000ms;
+}
+
+h1 {
+    margin-top: 150px;
+    color: black;
+    font-weight: bold;
+}
+
+#ave-donation{
+    margin: 30px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#ave-donation p{
+    font-size: 3rem;
+    color: var(--theme-color-2);
+    margin: 10px;
+}
+
+.amount-selector{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.amount-button{
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid var(--theme-color-2);
+    color: var(--theme-color-2);
+    border-radius: 15px;
+    cursor: pointer;
+    width: 120px;
+    padding: 20px;
+}
+
+.other-amount{
+    margin:auto;
+    width: 300px;
+}
+
+.input-box{
+    border-bottom: 2px solid #aaa;
+}
+
+input{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.bottom-btn{
+    margin-top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+}

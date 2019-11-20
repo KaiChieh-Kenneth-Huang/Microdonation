@@ -17,7 +17,7 @@
     height: 150px;
     background: #fff;
  }
- header img{
+ header img, .banner img{
     position: absolute;
     height: 80px;
     width: 80px;
@@ -38,31 +38,36 @@
     height: 100%;
     z-index: -1;
 }
- .button1{
-    position: absolute;
-    text-align: center;
-    font-size: 2rem;
-    width: 20%;
-    border: none;
-    background: var(--theme-color-1);
-    color: #fff;
-    padding: 1.5rem;
+.button{
+   font-size: 2rem;
+   border: none;
+   background: var(--theme-color-1);
+   color: #fff;
+   padding: 1.5rem 2rem;
+   cursor:pointer;
+   border-radius: 20px;
+   box-shadow: 3px 3px 10px var(--theme-color-1);
+   position: absolute;
+   text-align: center;
+}
+.learn-more-btn{
     margin: auto;
-    text-decoration: none;
-    cursor:pointer;
-    border-radius: 20px;
-    box-shadow: 3px 3px 5px #444;
     bottom: 100px;
     left: 40%;
  }
- .button1 a{
+ .button a{
     color: #fff;
     text-decoration: none;
   }
 .back-button{
+   position: absolute;
+   z-index: 2;
+   top:0;
+   left:0;
    padding: 50px;
 }
 .back-button img{
+   cursor:pointer;
    height: 50px;
 }
 
@@ -70,7 +75,51 @@
    margin:0;
    width: 100%;
    height: 450px;
-}
+   position: relative;
+   animation-name: fadeDown;
+   animation-duration: 1000ms;
+   transition: none;
+ }
+ @keyframes fadeDown{
+   0% {
+      transform: translateY(-100px);
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+ .body-container{
+   animation-name: fadeUp;
+   animation-duration: 1000ms;
+   transition: none;
+ }
+ @keyframes fadeUp{
+   0% {
+      transform: translateY(100px);
+      opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+
+ .fade2{
+   animation-name: fadeIn2;
+   animation-duration: 2000ms;
+   transition: none;
+ }
+ @keyframes fadeIn2{
+   0% {
+     opacity: 0;
+   }
+   50% {
+      opacity: 0;
+    }
+   100% {
+     opacity: 1;
+   }
+ }
 
 .project-title{
    color: black;
@@ -111,4 +160,60 @@
 
 .main-content{
    padding: 100px;
+   margin-bottom: 100px;
 }
+
+.bottom-opacity{
+   position: fixed;
+   width: 100%;
+   background-image: linear-gradient(0deg, #fff, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+   height: 200px;
+   z-index: 2;
+   bottom: 0px;
+ }
+
+ .bottom-opacity .button2{
+   position: absolute;
+   bottom: 30px;
+   right: 30px;
+ }
+
+ #top-donate-button{
+    position: absolute;
+    bottom: -4.5rem;
+    right: 50px;
+
+    color: var(--theme-color-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ #top-donate-button p{
+   margin: auto;
+   padding-top: 1rem;
+ }
+
+ .top-btn{
+   position: relative;
+ }
+
+ 
+ .center{
+   position: absolute;
+   text-align: center;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   animation-name: growIn;
+   animation-duration: 1000ms;
+ }
+
+ @keyframes growIn{
+   0% {
+     opacity: 0;
+   }
+   100% {     
+     opacity: 1;
+   }
+ }
