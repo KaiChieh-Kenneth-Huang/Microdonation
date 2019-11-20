@@ -5,7 +5,7 @@
   }
 
  body {
-    font-family: 'Proxima Nova', 'Roboto', Georgia;
+    font-family: 'Century Gothic','Proxima Nova', 'Roboto', Georgia;
     margin: 0;
 
  }
@@ -63,7 +63,8 @@
 .learn-more-btn{
     margin: auto;
     bottom: 100px;
-    left: 40%;
+    left: 50%;
+    transform: translate(-50%);
  }
  .button a{
     color: #fff;
