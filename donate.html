@@ -22,8 +22,8 @@
             <p>$5.49</p>
             Average Donation
           </div>
-          <div style="height: 285px; padding:100px">
-              <img id="center-image" style="height: 285px;" src="images/1_dollar.png">
+          <div class="center-image-box">
+              <img id="center-image" style="height: 250px;" src="images/1_dollar.png">
           </div>
           <div class="amount-selector">
             <div id="1-dollar" class="amount-button" onClick="update(true, 1);">$1</div>
@@ -95,7 +95,7 @@
           }else{
             document.getElementById('center-image').src='images/question_mark.png';
           }
-          document.getElementById('center-image').style.height="285px"; 
+          document.getElementById('center-image').style.height="250px"; 
         }
 
         function goBack() {
