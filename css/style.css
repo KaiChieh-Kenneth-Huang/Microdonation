@@ -19,7 +19,8 @@
  }
 
  header h1{
-   font-size: 2.8rem;
+   text-align: center;
+   font-size: 2rem;
    font-weight: bold;
    margin-bottom: 1rem;
  }
@@ -59,12 +60,16 @@
    box-shadow: 3px 3px 10px var(--theme-color-1);
    position: absolute;
    text-align: center;
+   font-weight: bold;
 }
 .learn-more-btn{
     margin: auto;
-    bottom: 100px;
     left: 50%;
     transform: translate(-50%);
+    font-size: 1.8rem;
+    margin-top: 5px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
  }
  .button a{
     color: #fff;
@@ -189,29 +194,31 @@
    right: 30px;
  }
 
- #top-donate-button{
-    position: absolute;
-    bottom: -4.5rem;
-    right: 50px;
-
+ #bottom-donate-button{
     color: var(--theme-color-1);
     display: flex;
+    padding-top: 30px;
     flex-direction: column;
     justify-content: center;
  }
- #top-donate-button p{
+ #bottom-donate-button p{
    margin: auto;
    padding-top: 1rem;
+   font-size: 2rem;
+   font-weight: bold;
  }
 
- .top-btn{
+ .bottom-btn{
    position: relative;
+   margin: auto;
+   width: fit-content;
+   padding: 1.5rem 5rem;
  }
-
  
  .center{
    position: absolute;
    text-align: center;
+   width: 70%;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);

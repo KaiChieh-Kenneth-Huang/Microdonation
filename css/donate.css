@@ -38,7 +38,7 @@ h1 {
 .amount-selector{
     display: flex;
     justify-content: space-around;
-    margin: 40px;
+    margin: 60px;
 }
 
 .amount-button{
@@ -68,12 +68,13 @@ input{
     border: none;
 }
 
-.bottom-btn{
-    margin-top: 40px;
+.bottom-btn2{
+    margin-top: 60px;
     left: 50%;
     transform: translate(-50%);
 }
 
 .center-image-box{
+    margin-top: 60px;
     height: 150px;
 }
