@@ -50,7 +50,7 @@
     z-index: -1;
 }
 .button{
-   font-size: 2rem;
+   font-size: 1.5rem;
    border: none;
    background: var(--theme-color-1);
    color: #fff;
@@ -63,13 +63,14 @@
    font-weight: bold;
 }
 .learn-more-btn{
-    top: 100px;
+    top: 104px;
     left: 50%;
     transform: translate(-50%);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-top: 5px;
     padding: 1rem 2rem;
     border-radius: 10px;
+    font-weight: bold;
  }
  .button a{
     color: #fff;
@@ -152,10 +153,10 @@
 }
 
 .number-box-container{
+   padding: 30px;
    margin-top: 0;
    display: flex;
-   width: 100%;
-   justify-content: space-around;
+   justify-content: space-between;
 }
 
 .number-box{
